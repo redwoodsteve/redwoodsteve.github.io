@@ -17,5 +17,5 @@ document.getElementById("dwn-btn").addEventListener("click", function(){
     var text = document.getElementById("text-val").value;
     var filename = document.getElementById("filename").value;
     
-    download(filename, text);
+    download(filename + ".txt", text);
 }, false);
