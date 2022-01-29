@@ -5,7 +5,10 @@
 	<textarea id="text-val">This is the content of my file</textarea><br/>
 </div>
 <p>File name</p>  
-<input type="text" id="filename">
+<input type="text" id="filename">    //file name input
 <input type="button" id="dwn-btn" value="Download text file"/>
 <script type="text/javascript" src="Download.js"></script>
 <link rel="stylesheet" href="style.css">
+<input type="file" onchange="readText(event)" />
+<pre id="output"></pre>
+<script type="text/javascript" src="Upload.js"></script>
