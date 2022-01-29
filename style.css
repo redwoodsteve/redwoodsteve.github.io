@@ -3,3 +3,8 @@ h1 {
   text-align: center;
   outline: #3aa2bb solid 10px;
 }
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  
+}
