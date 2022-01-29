@@ -2,9 +2,15 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   outline: #3aa2bb solid 10px;
+  animation-name: title;
+  animation-duration: 1.5s
 }
 a {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   
+}
+@keyframes title {
+  0% {top: 0px;}
+  100% {top: 10px;}
 }
