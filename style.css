@@ -3,7 +3,7 @@ h1 {
   text-align: center;
   outline: #3aa2bb solid 10px;
   animation-name: title;
-  animation-duration: 1.5s
+  animation-duration: 1.5s;
 }
 a {
   font-family: Arial, Helvetica, sans-serif;
