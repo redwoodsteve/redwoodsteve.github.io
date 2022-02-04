@@ -1,0 +1,1 @@
+const trans = document.getElementById()
