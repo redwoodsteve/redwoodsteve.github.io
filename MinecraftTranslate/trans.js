@@ -5,6 +5,6 @@ Monster["trans":"mob"]
 
 }
 function translate() {
-  document.getElementById('out').innerHTML = trans.trans
+  document.getElementById('out').innerHTML = lib.trans.trans
   
 }
