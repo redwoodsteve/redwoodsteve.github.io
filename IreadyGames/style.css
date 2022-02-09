@@ -6,11 +6,10 @@ h1 {
 p {
   font-family: arial, verdana, sans-serif;
 }
-a {
+#lnk {
   font-family: arial, verdana, sans-serif;
   text-align: center;
-  color: blue;
+  color: red;
   border: 5px solid blue;
   background-color: lightgray;
-  
 }
