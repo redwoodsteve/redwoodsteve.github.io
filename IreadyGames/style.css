@@ -10,5 +10,7 @@ a {
   font-family: arial, verdana, sans-serif;
   text-align: center;
   color: blue;
+  border: 5px solid blue;
+  background-color: lightgray;
   
 }
