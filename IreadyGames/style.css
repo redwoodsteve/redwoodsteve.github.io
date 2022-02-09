@@ -1,6 +1,7 @@
 h1 {
   font-family: arial, verdana, sans-serif;
   text-align: center;
+  outline: #3aa2bb solid 10px;
 }
 p {
   font-family: arial, verdana, sans-serif;
