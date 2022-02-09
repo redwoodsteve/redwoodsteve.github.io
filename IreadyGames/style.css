@@ -7,5 +7,7 @@ p {
 }
 a {
   font-family: arial, verdana, sans-serif;
+  text-align: center;
+  color: blue;
   
 }
