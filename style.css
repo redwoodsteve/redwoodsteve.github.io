@@ -7,10 +7,16 @@ h1 {
 }
 a {
   font-family: Arial, Helvetica, sans-serif;
-  text-align: left;
-  
 }
 @keyframes title {
   0%{top: 0px;}
   100%{top: 10px;}
+}
+.MainLinks {
+  text-align: left;
+  outline: #3aa2bb solid 3px;
+}
+.OtherLinks {
+  text-align: left;
+  outline: #FF7F50 solid 3px;
 }
