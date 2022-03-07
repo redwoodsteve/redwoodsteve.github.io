@@ -20,3 +20,7 @@ a {
   text-align: left;
   outline: #FF7F50 solid 3px;
 }
+.Games::before {
+  font-weight: bold;
+  content: "Games ";
+}
