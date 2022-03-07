@@ -23,4 +23,5 @@ a {
 .Games::before {
   font-weight: bold;
   content: "Games ";
+  outline: #3aa2bb solid 3px;
 }
