@@ -25,7 +25,7 @@ var elements = {
         "value": 450,
         "ultra": false
     },
-    "emeraldu": {
+    "emeraldu" : {
         "name": "Emerald",
         "value": 530,
         "ultra": true
