@@ -1,3 +1,115 @@
-<h1>Trading card database</h1><br>
-<h3>Database for</h3>
-<img src="pirielementsPXL-HD.png"></img>
+<h1>Pirielements TCG database</h1>
+<img class="LogoImage" src="https://redwoodsteve.github.io/TradingCardDatabase/pirielementsPXL-HD.png"
+<div class="Searchbox">
+    <select id="SearchBox">
+        <option value="ruby">Ruby</option>
+        <option value="amythyst">Amythyst</option>
+        <option value="emerald">Emerald</option>
+        <option value="gold">Gold</option>
+    </select>
+    <input type="checkbox" id="Uch">
+    <label for = "Uch">Ultra?</label>
+    <button type="button" onclick="UpdateSearch()">Search</button>
+ </div>
+ <div class="Output">
+    <p id="Text"></p>
+    <p id="Name"></p>
+    <p id="Ultra"></p>
+</div>   
+<script type="text/javascript">
+    var elements = {
+    "ruby" : {
+        "name": "Ruby",
+        "value": 100,  
+        "ultra": false
+    },
+    "rubyu" : {
+        "name": "Ruby",
+        "value": 200,
+        "ultra": true
+    },
+    "amythyst" : {
+        "name": "Amythyst",
+        "value": 300,
+        "ultra": false
+    },
+    "amythystu" : {
+        "name": "Amythyst",
+        "value": 400,
+        "ultra": true
+    }
+}
+    function UpdateSearch () {
+        var SearchPhrase = document.getElementById("SearchBox").value;
+        if(document.getElementById("Uch").checked) {
+            document.getElementById("Text").innerHTML=("Value: "+elements[SearchPhrase+"u"].value);
+            document.getElementById("Name").innerHTML=("Name: "+elements[SearchPhrase+"u"].name);
+            if(elements[SearchPhrase+"u"].ultra == true) {
+                document.getElementById("Ultra").innerHTML=("Ultra: Yes")
+        }
+        else {
+                document.getElementById("Ultra").innerHTML=("Ultra: No")
+        }
+        }
+        else {
+            document.getElementById("Text").innerHTML=("Value: "+elements[SearchPhrase].value);
+            document.getElementById("Name").innerHTML=("Name: "+elements[SearchPhrase].name);
+            if(elements[SearchPhrase].ultra == true) {
+                document.getElementById("Ultra").innerHTML=("Ultra: Yes")
+        }
+        else {
+                document.getElementById("Ultra").innerHTML=("Ultra: No")
+        }
+        }
+        
+        
+        
+    }
+   
+</script>
+<style>
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        background-color: rgb(49, 138, 140);
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    input{
+        align-self: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    option{
+        color:cadetblue;
+    }
+    .SearchBox{ 
+        padding: 36px;
+        margin: 0px auto 0px auto; 
+        display: block; 
+        background: #a39e9e; 
+        color: #000000; 
+        border-radius: 17px; 
+        outline: 3px solid black
+    }
+    .Output{
+        padding: 36px;
+        margin: 0px auto 0px auto;
+        background:rgb(49, 138, 140);
+        border-radius: 17px;
+    }
+    img{
+        width: 50px;
+    }
+    .LogoImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    button{
+        padding: 17.5px 150px;
+        margin: 10px 4px;
+        background: coral;
+        border-radius: 9px;
+    }
+</style>
