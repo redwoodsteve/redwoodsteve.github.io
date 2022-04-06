@@ -20,4 +20,14 @@ var elements = {
         "value": 400,
         "ultra": true
     },
+    "emerald" : {
+        "name": "Emerald",
+        "value": 450,
+        "ultra": false
+    },
+    "emeraldu": {
+        "name": "Emerald",
+        "value": 530,
+        "ultra": true
+    },
 }
