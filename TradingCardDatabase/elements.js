@@ -29,5 +29,15 @@ var elements = {
         "name": "Emerald",
         "value": 530,
         "ultra": true
-    }
+    },
+    "gold": {
+        "name": "Gold",
+        "value": 600,
+        "ultra": false
+    },
+    "goldu": {
+        "name": "Gold",
+        "value": 700,
+        "ultra": true
+    },
 }
