@@ -29,5 +29,5 @@ var elements = {
         "name": "Emerald",
         "value": 530,
         "ultra": true
-    },
+    }
 }
