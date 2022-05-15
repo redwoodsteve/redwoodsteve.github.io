@@ -1,3 +1,0 @@
-D
- =3      SOMEONE FARTED...
-D
