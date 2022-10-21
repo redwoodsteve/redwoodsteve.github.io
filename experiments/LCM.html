@@ -1,0 +1,23 @@
+<script type="text/javascript">
+  function findLCM () {
+  var num1 = document.getElementByID("numimput1").value
+  var num2 = document.getElementByID("numimput2").value
+  let min = (num1 > num2) ? num1 : num2;
+
+// while loop
+while (true) {
+    if (min % num1 == 0 && min % num2 == 0) {
+        console.log(`The LCM of ${num1} and ${num2} is ${min}`);
+        break;
+    }
+    min++;
+  }
+  
+}
+</script>
+<h1 style="text-align: center">LCM finder</h1>
+<form>
+  <input type="text", ID="numimput1">
+  <input type="text", ID="numimput2">
+  <input type="button", onclick="findLCM">
+</form>
