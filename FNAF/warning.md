@@ -1,3 +1,0 @@
-bro this game has a LOT of jumpscares...
-
-FREDDY WILL COME!
