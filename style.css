@@ -1,29 +1,31 @@
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  outline: #3aa2bb solid 10px;
-  animation-name: title;
-  animation-duration: 1.5s;
-}
-a {
-  font-family: Arial, Helvetica, sans-serif;
-}
-@keyframes title {
-  0%{top: 0px;}
-  100%{top: 10px;}
-}
-.MainLinks {
-  text-align: left;
-  outline: #3aa2bb solid 3px;
-}
-.OtherLinks {
-  text-align: left;
-  outline: #FF7F50 solid 3px;
-}
-.HDR {
-  outline: #000 solid 3px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.Games {
-  outline: #3aa2bb solid 3px;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    outline: #a2a2a2 solid 10px;
+    margin: 10px;
+    background-color: #c5c5c5;
+    border-radius: 5px;
+  }
+  a {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .MainLinks {
+    text-align: left;
+    outline: #3aa2bb solid 3px;
+    border-radius: 2px;
+  }
+  .OtherLinks {
+    text-align: left;
+    outline: #FF7F50 solid 3px;
+    border-radius: 2px;
+  }
+  .HDR {
+    outline: #ff7676 solid 3px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 2px;
+  }
+  .Games {
+    outline: #4cd3f5 solid 3px;
+    border-radius: 2px;
+  }
+  
