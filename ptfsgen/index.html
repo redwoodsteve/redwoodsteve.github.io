@@ -1,0 +1,85 @@
+<head>
+    <script src="airplanes.js"></script>
+    <link rel="stylesheet" href="chill.css"/>
+</head>
+<body>
+    <h1 class="title">PTFS random plane generator</h1>
+    <h2 class="sub">Developed by redwoodsteve</h2>
+    <div class="wrap">
+        <input type="checkbox" id="airlinerCHK"/>
+        <label for="airlinerCHK">Airliners</label>
+        <button onclick="selAll();" id="selAllBTN">Select all</button>
+        <br>
+        <input type="checkbox" id="cargoCHK"/>
+        <label for="cargoCHK">Cargo</label>
+        <br>
+        <input type="checkbox" id="seaplaneCHK"/>
+        <label for="seaplaneCHK">Seaplanes</label>
+        <br>
+        <input type="checkbox" id="lightCHK"/>
+        <label for="lightCHK">Light Aircraft</label>
+        <br>
+        <input type="checkbox" id="modernmilitaryCHK"/>
+        <label for="modernmilitaryCHK">Modern Military</label>
+        <br>
+        <input type="checkbox" id="oldmilitaryCHK"/>
+        <label for="oldmilitaryCHK">Old Military</label>
+        <br>
+        <input type="checkbox" id="helicopterCHK"/>
+        <label for="helicopterCHK">Helicopters</label>
+        <br>
+        <input type="checkbox" id="miscCHK"/>
+        <label for="miscCHK">Misc</label>
+        <br>
+        <div class="wrap">
+            <input type="checkbox" id="gamepassCHK"/>
+            <label for="gamepassCHK">Gamepasses</label>
+        </div>
+    </div>
+    <br>
+    <button id="generateBTN" onclick="generateBTN()">Generate!</button>
+    <br>
+    <div class="wrap">
+        <p id="output"></p>
+        <p id="outputType"></p>
+    </div>
+    <br>
+    <div class="wrap">
+        <h1 class="sub">About PTFS random generator</h1>
+        <br>
+        <p>I made this random generator because I was bored and there are no random plane generators for PTFS. To use this random generator, use the checkboxes to select which category(s) of aircraft you want to include in the generation. Then press the generate button to find what airplane you should fly next in PTFS!</p>
+    </div>
+</body>
+<script src="generate.js"></script>
+<script src="logic.js"></script>
+<script>
+    const output = document.getElementById("output");
+    const outputType = document.getElementById("outputType");
+    function randomNum(max){
+        return Math.floor(Math.random() * max) + 1
+    }
+    function generateBTN(){
+        if(allAreBlank() == true){
+            output.innerText = "Please check at least 1 checkbox."
+            outputType.innerText = ""
+            console.log("no work");
+        } else if (gamepassCheckedOnly() == true){
+            output.innerText = "Please select another checkbox."
+            outputType.innerText = ""
+            console.log("no work");
+        } else {
+            generate();
+        }
+    }
+    function selAll(){
+        document.getElementById("airlinerCHK").checked = true
+        document.getElementById("cargoCHK").checked = true
+        document.getElementById("lightCHK").checked = true
+        document.getElementById("modernmilitaryCHK").checked = true
+        document.getElementById("oldmilitaryCHK").checked = true
+        document.getElementById("helicopterCHK").checked = true
+        document.getElementById("seaplaneCHK").checked = true
+        document.getElementById("miscCHK").checked = true
+        document.getElementById("gamepassCHK").checked = true
+    }
+</script>
