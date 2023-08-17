@@ -1,31 +1,50 @@
-h1 {
-    font-family: Arial, Helvetica, sans-serif;
+@font-face {
+    font-family: 'Manrope';
+    src: url('manrope-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+ }
+ h1 {
     text-align: center;
-    outline: #a2a2a2 solid 10px;
-    margin: 10px;
-    background-color: #c5c5c5;
-    border-radius: 5px;
-  }
-  a {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  .MainLinks {
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+h2 {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+body {
+    background-color: white;
+}
+.wrap {
     text-align: left;
-    outline: #3aa2bb solid 3px;
-    border-radius: 2px;
-  }
-  .OtherLinks {
-    text-align: left;
-    outline: #FF7F50 solid 3px;
-    border-radius: 2px;
-  }
-  .HDR {
-    outline: #ff7676 solid 3px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-radius: 2px;
-  }
-  .Games {
-    outline: #4cd3f5 solid 3px;
-    border-radius: 2px;
-  }
-  
+    background-color: rgb(228, 227, 227);
+    width: 40%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 5px;
+}
+label {
+    font-family: Manrope, sans-serif;
+}
+button {
+    background-color: rgb(228, 227, 227);
+    border: none;
+    padding: 10px 32px;
+    cursor: pointer;
+    font-family: Manrope, sans-serif;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+}
+button:hover {
+    background-color: rgb(192, 190, 190);
+}
+p {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
