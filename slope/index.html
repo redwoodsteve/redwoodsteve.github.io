@@ -1,8 +1,25 @@
+<h1>Slope</h1>
+<h2>Play Slope now!</h2>
+<div class="wrap">
+    <button type="button" onclick="masked">Masked mode</button>
+    <button type="button" onclick="unmasked">Normal mode</button>
+    <p>If you play on masked mode, it will put the code for Slope in a new tab so that it looks like you are not playing slope in your history.
+        If you play on normal mode, you will open up the direct website for playing the Slope game.
+    </p>
+</div>
+<link rel="stylesheet" href="/style.css">
 <script type="text/javascript">
-var page = window.open();
-page.document.open();
-page.document.write('<html><iframe style="height:100%; width: 100%; border: none; position: fixed; top: 0; right: 0; left: 0; bottom: 0; border: none" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" src="https://play.cluster.ws/play/slope/"></iframe></html>');
-page.document.close();
+    function masked(){
+        var page = window.open();
+        page.document.open();
+        page.document.write('<html>"><iframe src="redwoodsteve.github.io/slope/play"></iframe></html>');
+        page.document.close();
+    }
+    function unmasked(){
+        var temp = document.createElement('a');
+        temp.href = "redwoodsteve.github.io/slope/play"
+        temp.click();
+    }
 </script>
 <title>Google</title>
 <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-256.png">
