@@ -1,0 +1,25 @@
+<h1>IcyPurpleHead 2</h1>
+<h2>Play IcyPurpleHead 2 now!</h2>
+<div class="wrap">
+    <button type="button" onclick="masked();">Masked mode</button>
+    <button type="button" onclick="unmasked();">Normal mode</button>
+    <p>If you play on masked mode, it will put the code for IPH2 in a new tab so that it looks like you are not playing IPH2 in your history. When you play masked mode, you will have to allow popups from this website or it will not work!
+        If you play on normal mode, you will open up the direct website for playing IPH2. (IPH2 stands for IcyPurpleHead 2)
+    </p>
+</div>
+<link rel="stylesheet" href="/style.css">
+<script type="text/javascript">
+    function masked(){
+        var page = window.open();
+        page.document.open();
+        page.document.write('<html><iframe src="https://www.mathplayground.com/icy_purple_head_2/index.html" style="display: block;width: 100%;border: none;overflow-y: auto;overflow-x: hidden;height: 100%;"></iframe></html>');
+        page.document.close();
+    }
+    function unmasked(){
+        var temp = document.createElement('a');
+        temp.href = "https://www.mathplayground.com/icy_purple_head_2/index.html"
+        temp.click();
+    }
+</script>
+<title>Google</title>
+<link rel="icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-256.png">
