@@ -14,4 +14,14 @@
 <a href="icypurplehead3">IcyPurpleHead 3</a><br>
 <a href="icypurplehead2">IcyPurpleHead 2</a><br>
 </div>
+<button type="button" onclick="masked()">Enter website in masked mode</button>
 <link rel="stylesheet" href="style.css">
+<script>
+  function masked(){
+        var page = window.open();
+        page.document.open();
+        page.document.write('<html><iframe src="https://redwoodsteve.github.io" style="display: block;width: 100%;border: none;overflow-y: auto;overflow-x: hidden;height: 100%;"></iframe></html>');
+        window.location.replace("https://classroom.google.com");
+        page.document.close();
+    }
+</script>
