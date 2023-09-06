@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <h1>Tab Customiser</h1>
 <h2>Customise this tab's name, icon, and even URL!</h2>
-<tite>Tab customiser</tite>
+<title>Tab customiser</title>
 <div class="wrap">
   <link href="https://redwoodsteve.github.io/style.css" rel="stylesheet">
   <input type="text" id="nameIn">
@@ -14,6 +14,8 @@
 </div>
 <script>
   function changeTab(){
-    document.querySelector('title').textContent = document.getElementById("nameIn").value;
+    var newPageTitle = 'amugus'
+    newPageTitle = document.getElementById("nameIn").value;
+    document.querySelector('title').textContent = newPageTitle;
   }
 </script>
