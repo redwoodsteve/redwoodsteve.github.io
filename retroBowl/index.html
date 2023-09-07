@@ -1,0 +1,27 @@
+<h1>Retro Bowl</h1>
+<h2>Play Retro Bowl now!</h2>
+<div class="wrap">
+    <button type="button" onclick="masked();">Masked mode</button>
+    <button type="button" onclick="unmasked();">Normal mode</button>
+    <p>If you play on masked mode, it will put the code for Retro Bowl in a new tab so that it looks like you are not playing Retro Bowl in your history. When you play masked mode, you will have to allow popups from this website or it will not work!
+        If you play on normal mode, you will open up the direct website for playing the Retro Bowl game.
+    </p>
+</div>
+<link rel="stylesheet" href="/style.css">
+<script type="text/javascript">
+    function masked(){
+        var page = window.open();
+        page.document.open();
+        page.document.write('<html><iframe src="https://retro-bowl.christopherla12.repl.co" style="display: block;width: 100%;border: none;overflow-y: auto;overflow-x: hidden;height: 100%;"></iframe></html>');
+        window.location.replace("https://classroom.google.com");
+        page.document.close();
+        document.close()
+    }
+    function unmasked(){
+        var temp = document.createElement('a');
+        temp.href = "https://retro-bowl.christopherla12.repl.co"
+        temp.click();
+    }
+</script>
+<title>Google</title>
+<link rel="icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-256.png">
