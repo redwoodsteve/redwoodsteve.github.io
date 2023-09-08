@@ -39,6 +39,7 @@ button {
     margin-left: auto;
     margin-right: auto;
     display: grid;
+    transition-duration: 1s;
 }
 button:hover {
     background-color: rgb(192, 190, 190);
@@ -49,6 +50,16 @@ p {
     color: black;
 }
 a {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+li {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+ul {
     text-align: center;
     font-family: Manrope, sans-serif;
     color: black;
