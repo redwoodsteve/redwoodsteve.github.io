@@ -1,0 +1,35 @@
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<style>.menubtn{border: none;border-radius: 3px;cursor: pointer;display:inline;float:left;}</style>
+<button type="button" class="menubtn" onclick="window.open('https://redwoodsteve.github.io')"><span class="material-symbols-outlined">home</span></button>
+<button type="button" class="menubtn" onclick="alert('lol this does nothing');"><span class="material-symbols-outlined">settings</span></button>
+<button type="button" class="menubtn" onclick="alert('wait.. new feature coming soon?!');"><span class="material-symbols-outlined">favorite</span></button>
+<button type="button" class="menubtn" onclick="alert('updates coming soon..');"><span class="material-symbols-outlined">code</span></button>
+<br>
+<br>
+<h1>Slope</h1>
+<h2>Play Slope now!</h2>
+<div class="wrap">
+    <button type="button" onclick="masked();">Masked mode</button>
+    <button type="button" onclick="unmasked();">Normal mode</button>
+    <p>If you play on masked mode, it will put the code for Duck Life 4 in a new tab so that it looks like you are not playing Duck Life 4 in your history. When you play masked mode, you will have to allow popups from this website or it will not work!
+        If you play on normal mode, you will open up the direct website for playing the Duck Life 4 game.
+    </p>
+</div>
+<link rel="stylesheet" href="/style.css">
+<script type="text/javascript">
+    function masked(){
+        var page = window.open();
+        page.document.open();
+        page.document.write('<html><iframe src="https://www.mathplayground.com/duck4/index.html" style="display: block;width: 100%;border: none;overflow-y: auto;overflow-x: hidden;height: 100%;"></iframe></html>');
+        window.location.replace("https://classroom.google.com");
+        page.document.close();
+        document.close()
+    }
+    function unmasked(){
+        var temp = document.createElement('a');
+        temp.href = "https://www.mathplayground.com/duck4/index.html"
+        temp.click();
+    }
+</script>
+<title>Google</title>
+<link rel="icon" href="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-256.png">
