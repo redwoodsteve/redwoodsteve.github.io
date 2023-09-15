@@ -1,0 +1,44 @@
+<link href="https://redwoodsteve.github.io/style.css" rel="stylesheet" />
+<h1>Games!</h1>
+<h2>WE GOT GAMES</h2>
+<div class="tile" id="stickmanhook">
+        <h3>Stickman Hook</h3>
+        <p>A game about swinging..</p>
+</div>
+<style>
+    .tile {
+        background-color: lightgray;
+        width: 10%;
+        height: 10%;
+        border-radius: 5px;
+        border: 2px darkgray solid;
+        display: inline-block;
+        transition-duration: 1s;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+        margin: 6px;
+    }
+    .tile:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.651);
+    }
+    p {
+        font-size: 1.4vmin;
+    }
+    h3 {
+        font-size: 2vmin;
+    }
+</style>
+<script>
+    var pages = {
+        "stickmanhook": "https://redwoodsteve.github.io/games/stickman-hook",
+        "slope": "https://redwoodsteve.github.io/games/slope"
+    }
+    for (const key in pages) {
+        if(pages.hasOwnProperty(key)){
+            document.getElementById(key).addEventListener("click", function(){
+                window.open(pages[key])
+            })
+        }
+    }
+</script>
