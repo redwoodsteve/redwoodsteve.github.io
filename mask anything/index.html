@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="https://redwoodsteve.github.io/style.css" />
+<script src="https://raw.githubusercontent.com/redwoodsteve/windowJS/main/src/window.js"></script>
+
+<h1>Mask Anything!</h1>
+<h2>Use this tool to enter any website in masked mode. This is <em>not an unblocker!</em></h2>
+<br>
+<br>
+<p>The url MUST begin with "https://"!</p>
+<input type="url" name="url" id="url" placeholder="https://example.com" pattern="https://.*" size="30" required /></form>
+<label for="url">URL to mask</label>
+<button type="button" onclick="mask(document.getElementById("url").value)">Mask</button>
