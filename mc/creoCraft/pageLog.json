@@ -13,5 +13,10 @@
         "display": "Download modpack",
         "url": "./page.html?page=download.md",
         "path": "./pages/download.md"
+    },
+    "info.md": {
+        "display": "Info",
+        "url": "./page.html?page=info.md",
+        "path": "./pages/info.md"
     }
 }
