@@ -1,0 +1,17 @@
+{
+    "welcome.md": {
+        "display": "Welcome",
+        "url": "./page.html?page=welcome.md",
+        "path": "./pages/welcome.md"
+    },
+    "test.md": {
+        "display": "TEST",
+        "url": "./page.html?page=test.md",
+        "path": "./pages/test.md"
+    },
+    "download.md": {
+        "display": "Download modpack",
+        "url": "./page.html?page=download.md",
+        "path": "./pages/download.md"
+    }
+}
