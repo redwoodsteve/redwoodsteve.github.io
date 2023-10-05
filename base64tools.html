@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">@font-face {
+    font-family: 'Manrope';
+    src: url('https://redwoodsteve.github.io/manrope-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1, h2, p, label {
+    font-family: Manrope, Arial, sans-serif;
+    color: e8eddf;
+}
+h1, h2 {
+    text-align: center;
+}
+textarea {
+    resize: none;
+    border-color: #F5CB5C;
+    border-width: 1px;
+    background-color: #333533;
+    border-radius: 8px;
+    margin: auto;
+    width: 80%;
+    align-self: center;
+    display: block;
+    transition-duration: 0.5s;
+    color: #E8EDDF;
+}
+textarea:hover {
+    border-radius: 3px;
+}
+body {
+    background-color: #242423;
+}
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #F5CB5C;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    transition-duration: 0.1s;
+}
+button:hover {
+    transform: translate(-2px, -2px);
+}
+button:active {
+    box-shadow: inset 2px 2px 2px black;
+    transform: translate(-1px, -1px);
+}</style>
+
+    
+        <title>Base64 tools</title>
+    </head>
+    <body>
+        <h1>Base64 Tools</h1>
+        <textarea id="input" cols="80" rows="10" placeholder="Input"></textarea>
+        <button type="button" onclick="decode()">Decode</button>
+        <button type="button" onclick="encode()">Encode</button>
+        <textarea id="output" cols="80" rows="10" placeholder="Output" readonly=""></textarea>
+<script>function decode() {
+    document.getElementById("output").value = atob(document.getElementById("input").value)
+}
+function encode() {
+    document.getElementById("output").value = btoa(document.getElementById("input").value)
+}</script></body>
