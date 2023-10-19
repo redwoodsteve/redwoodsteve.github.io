@@ -45,7 +45,7 @@ p {
     color: black;
 }
 p .tiny {
-    font-size: 1em !important;
+    font-size: 0.5em !important;
 }
 a {
     text-align: center;
