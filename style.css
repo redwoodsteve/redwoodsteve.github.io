@@ -44,6 +44,9 @@ p {
     font-family: Manrope, sans-serif;
     color: black;
 }
+p .tiny {
+    font-size: smaller !important;
+}
 a {
     text-align: center;
     font-family: Manrope, sans-serif;
