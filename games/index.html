@@ -1,7 +1,9 @@
 <link href="https://redwoodsteve.github.io/style.css" rel="stylesheet" />
 <h1>Games!</h1>
 <h2>WE GOT GAMES</h2>
+
 <div id="options">
+    <button type="button" onclick="playRandom()">Random game</button>
     <input type="checkbox" id="maskedBox" checked/>
     <label for="maskedBox">Masked mode</label>
 </div>
@@ -89,14 +91,14 @@
         border-radius: 5px;
         border: 2px darkgray solid;
         display: inline-block;
-        transition-duration: 1s;
+        transition-duration: 0.1s;
         aspect-ratio: 1/1;
         cursor: pointer;
         margin: 6px;
     }
     .tile:hover {
-        transform: translate(-3px, -3px);
-        box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.651);
+        transform: translate(-1px, -1px);
+        box-shadow: 2px 2px 2px rgba(1, 1, 1, 0.651);
     }
     p {
         font-size: 1.4vmin;
@@ -107,12 +109,24 @@
     #options {
         background-color: lightgray;
         border-radius: 5px;
+        padding: 3px;
     }
     input, label {
         cursor: pointer;
     }
+    button {
+        display: inline-block;
+        margin: 1%;
+    }
 </style>
 <script>
+    var randomProperty = function (obj) {
+        var keys = Object.keys(obj);
+        var resp = {}
+        resp.key = keys[ keys.length * Math.random() << 0]
+        resp.value = obj[resp.key]
+        return resp;
+    };
     var pages = {
         "stickmanhook": "https://redwoodsteve.github.io/games/stickman-hook",
         "slope": "https://redwoodsteve.github.io/games/slope",
@@ -145,9 +159,22 @@
                     page.document.close();
                     document.close()
                 }else{
-                    window.open(pages[key])
+                    window.location.replace(pages[key])
                 }
             })
         }
     }//epic
+    function playRandom(){
+        var game = randomProperty(pages)
+        if(document.getElementById("maskedBox").checked == true){
+                    var page = window.open();
+                    page.document.open();
+                    page.document.write('<html><iframe src="' + game.value + '" style="position: fixed;top: 0px;bottom: 0px;right: 0px;width: 100%;border: none;margin: 0;padding: 0;overflow: hidden;z-index: 999999;height: 100%;"></iframe></html>');
+                    window.location.replace("https://classroom.google.com");
+                    page.document.close();
+                    document.close();
+                }else{
+                    window.location.replace(game.value);
+                }
+    }
 </script>
