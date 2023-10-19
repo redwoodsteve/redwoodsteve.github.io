@@ -1,0 +1,171 @@
+html:
+<div class="background-blur">
+<img id="tr" src="https://freepngimg.com/thumb/spider/31287-9-spider-web-transparent-image.png">
+<h1>redwoodsteve.github.io</h1>
+<h2>Happy halloween!</h2>
+<script src="msg.js"></script>
+<title>Redwoodsteve's website</title>
+<div id="msgBox">
+<p id="message">lol there is an error</p>
+<p id="messageCounter" class="tiny">error</p>
+</div>
+<script>
+    document.getElementById("message").innerText = msg[Math.floor(Math.random()*msg.length)]
+    document.getElementById("messageCounter").innerText = "There are " + msg.length + " possible messages."
+</script>
+<div class="wrap">
+<h2>General</h2><br>
+<a href="TextEdit">Text edit online</a><br>
+<a href="ptfsgen">PTFS random plane generator</a><br>
+<a href="base64tools.html">Base64 Tools</a><br>
+</div>
+<br>
+<img id="m" src="https://www.svgheart.com/wp-content/uploads/2022/09/ghost-bundle_1271-430-min.png">
+<div class="wrap"><br>
+<h2>Other</h2><br>
+<button class="linkButton" type="button" onclick="window.location.replace('https://redwoodsteve.github.io/games')">Games!</button>
+</div>
+
+<link rel="stylesheet" href="style.css">
+<style>
+    .alert {
+        background-color: rgba(207, 39, 39, 0.678);
+        border-color: rgb(138, 20, 20);
+        border-width: 3px;
+        border-style: solid;
+        border-radius: 8mm;
+        width: 45%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+</style>
+<p class="tiny">website designed by redwoodsteve</p>
+<p class="tiny">images from svgheart.com and freepngimage.com</p>
+</div>
+
+
+css:
+@font-face {
+    font-family: 'Manrope';
+    src: url('https://redwoodsteve.github.io/manrope-reg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+h2 {
+    font-size: 1em;
+}
+body {
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8c3303ff-a286-41b0-a37b-95886b5262df/d9bdhwu-877f172a-a33b-41aa-a234-f47bed1f59fd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjMzMwM2ZmLWEyODYtNDFiMC1hMzdiLTk1ODg2YjUyNjJkZlwvZDliZGh3dS04NzdmMTcyYS1hMzNiLTQxYWEtYTIzNC1mNDdiZWQxZjU5ZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7173OQSnCegtr1qapTMVGmwRptZSgU3V1jBZGt_gXeo);
+    object-fit: cover;
+    //background-attachment: fixed;
+}
+.wrap {
+    text-align: left;
+    background-color: rgba(252, 130, 74, 0.7);
+    width: 40%;
+    margin: auto;
+    border-radius: 8px;
+    padding: 5px;
+    backdrop-filter: blur(2px);
+}
+label {
+    font-family: Manrope, sans-serif;
+}
+button:not(.linkButton) {
+    background-color: #564256;
+    border: none;
+    padding: 10px 32px;
+    cursor: pointer;
+    font-family: Manrope, sans-serif;
+    border-radius: 8px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    transition-duration: 1s;
+    color: #E8E8E8;
+}
+button:hover:not(.linkButton) {
+    background-color: #806280;
+}
+p {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: #E8E8E8;
+}
+.tiny {
+    font-size: 0.6em !important;
+}
+a {
+    text-align: center;
+    display: grid;
+    font-family: Manrope, sans-serif;
+    color: black;
+    font-size: 1em;
+    transition-duration: 1s;
+}
+a:hover {
+    color: #564256;
+}
+li {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+ul {
+    text-align: center;
+    font-family: Manrope, sans-serif;
+    color: black;
+}
+#msgBox {
+    background: linear-gradient(53deg, rgba(252,129,74,0.5284488795518207) 0%, rgba(86,66,86,0.5144432773109244) 100%);
+    border-radius: 8px;
+    backdrop-filter: blur(2px);
+}
+.background-blur {
+    backdrop-filter: blur(2px);
+    border-radius: 3px;
+}
+.linkButton {
+    background: none;
+    color: black;
+    padding: 0;
+    font-size: 1em;
+    text-decoration: underline;
+    display: grid;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    cursor: pointer;
+    transition-duration: 1s;
+    font-family: Manrope, sans-serif;
+}
+.linkButton:hover {
+    color: #564256;
+}
+#tr {
+    top: 0px;
+    right: 0px;
+    height: 25%;
+    margin: 0px;
+    position: absolute;
+}
+#bl {
+    bottom: 0px;
+    left: 0px;
+    height: 25%;
+    margin: 0px;
+    position: absolute;
+}
+#m {
+    width: 98vmax;
+    display: grid;
+    position: absolute;
+    z-index: -1 !important;
+}
