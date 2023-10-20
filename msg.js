@@ -99,5 +99,7 @@ var msg = [
     "99 bottles of beer on the wall",
     "100",
     "before a new airliner can be used for commercial or cargo use, it must be able to stay in flight for another 70 miles when both engines are lost.",
-    "this is the 100th message"
+    "this is the 100th message",
+    "Wafflqs",
+    "the boeing 777 has the most powerfull engines of any airliner"
 ]
