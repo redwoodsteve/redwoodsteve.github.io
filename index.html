@@ -23,12 +23,12 @@
             }else{
                 var foundMSG = []
                 //first time here?
-                foundMSG.append(document.getElementById("msg").innerText)
-                localStorage.setItem(JSON.stringify(foundMSG))
+                foundMSG.push(document.getElementById("msg").innerText)
+                localStorage.setItem("foundMSG", JSON.stringify(foundMSG))
             }
             document.getElementById("counter").innerText = "You found " + foundMSG.length + " out of " + msg.length + " possible messages."
             function reset() {
-                localStorage.setItem("foundMSG", JSON.stringify([]))
+                localStorage.removeItem("foundMSG")
                 foundMSG = null
                 document.getElementById("counter").innerText = foundMSG.length
             }

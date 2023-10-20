@@ -104,5 +104,8 @@ var msg = [
     "the boeing 777 has the most powerfull engines of any airliner",
     "hi from alex",
     "shoe",
-    "python is not used in websites (most of the time)"
+    "python is not used in websites (most of the time)",
+    "GYATTTTTT",
+    "bluemoji",
+    "'play hollowknight' - maxim"
 ]
