@@ -82,12 +82,15 @@
     <p>drive on dangerous terrain but you cant steer</p>
 </div>
 <style>
+    h1, h2 {
+        color: white;
+    }
     .tile {
-        background-color: lightgray;
+        background-color: rgba(252, 130, 74, 0.7);
         width: 20%;
         height: 20%;
         border-radius: 5px;
-        border: 2px darkgray solid;
+        border: 2px rgba(155, 79, 44, 0.795) solid;
         display: inline-block;
         transition-duration: 1s;
         aspect-ratio: 1/1;
@@ -96,7 +99,7 @@
     }
     .tile:hover {
         transform: translate(-3px, -3px);
-        box-shadow: 3px 3px 3px rgba(1, 1, 1, 0.651);
+        box-shadow: 3px 3px 3px rgba(27, 0, 0, 0.651);
     }
     p {
         font-size: 1.4vmin;
@@ -105,11 +108,14 @@
         font-size: 2vmin;
     }
     #options {
-        background-color: lightgray;
+        background-color: #564256;
         border-radius: 5px;
     }
     input, label {
         cursor: pointer;
+    }
+    body {
+        background-image: url(https://wallpapercave.com/wp/wp7820246.jpg);
     }
 </style>
 <script>

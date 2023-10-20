@@ -1,32 +1,43 @@
-<h1>redwoodsteve.github.io</h1>
-<script src="msg.js"></script>
-<title>Redwoodsteve's website</title>
-<p id="message">lol there is an error</p>
-<script>
-    document.getElementById("message").innerText = msg[Math.floor(Math.random()*msg.length)]
-</script>
-<div class="wrap">
-<h2>General</h2><br>
-<a href="TextEdit">Text edit online</a><br>
-<a href="ptfsgen">PTFS random plane generator</a><br>
-<a href="base64tools.html">Base64 Tools</a><br>
-</div>
-<br>
-<div class="wrap"><br>
-<h2>Other</h2><br>
-<button type="button" onclick="window.location.replace('https://redwoodsteve.github.io/games')">Games!</button>
-</div>
-
-<link rel="stylesheet" href="style.css">
-<style>
-    .alert {
-        background-color: rgba(207, 39, 39, 0.678);
-        border-color: rgb(138, 20, 20);
-        border-width: 3px;
-        border-style: solid;
-        border-radius: 8mm;
-        width: 45%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-</style>
+<div class="background-blur">
+    <img id="tr" src="https://freepngimg.com/thumb/spider/31287-9-spider-web-transparent-image.png">
+    <h1>redwoodsteve.github.io</h1>
+    <h2>Happy halloween!</h2>
+    <script src="msg.js"></script>
+    <title>Redwoodsteve's website</title>
+    <div id="msgBox">
+    <p id="message">lol there is an error</p>
+    <p id="messageCounter" class="tiny">error</p>
+    </div>
+    <script>
+        document.getElementById("message").innerText = msg[Math.floor(Math.random()*msg.length)]
+        document.getElementById("messageCounter").innerText = "There are " + msg.length + " possible messages."
+    </script>
+    <div class="wrap">
+    <h2>General</h2><br>
+    <a href="TextEdit">Text edit online</a><br>
+    <a href="ptfsgen">PTFS random plane generator</a><br>
+    <a href="base64tools.html">Base64 Tools</a><br>
+    </div>
+    <br>
+    <img id="m" src="https://www.svgheart.com/wp-content/uploads/2022/09/ghost-bundle_1271-430-min.png">
+    <div class="wrap"><br>
+    <h2>Other</h2><br>
+    <button class="linkButton" type="button" onclick="window.location.replace('https://redwoodsteve.github.io/games')">Games!</button>
+    </div>
+    
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .alert {
+            background-color: rgba(207, 39, 39, 0.678);
+            border-color: rgb(138, 20, 20);
+            border-width: 3px;
+            border-style: solid;
+            border-radius: 8mm;
+            width: 45%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <p class="tiny">website designed by redwoodsteve</p>
+    <p class="tiny">images from svgheart.com and freepngimage.com</p>
+    </div>
