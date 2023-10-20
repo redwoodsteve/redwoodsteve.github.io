@@ -82,5 +82,22 @@ var msg = [
     "in a lot of ads, the time displayed on a watch is 10:10",
     "a dime has 118 ridges around its edge",
     "the average human falls asleep in seven minutes",
-    "almonds actually belong to the peach family"
+    "almonds actually belong to the peach family",
+    "boeing also produces satellites",
+    "boeing is the largest aircraft company",
+    "the airbus A380 is the largest passenger airliner",
+    "the antonov AN225 is the biggest airplane ever, but it only transported cargo. it got bombed during the war involving Russia and Ukraine.",
+    "i liek airplanes",
+    "ai is smart",
+    "you can order a commercial airliner",
+    "you can (probably) order a fighter jet (they are not cheap)",
+    "airliners fly on specified routes, they only deviate from the planned path to avoid risks like storms",
+    "turbulence never crashed an airplane, it only hurt someone when they were not buckled in to their seat",
+    "money is dirty",
+    "the averge person eats 10 spiders during their sleep in their lifetime (oohh spooky)",
+    "this letter is very small: י",
+    "99 bottles of beer on the wall",
+    "100",
+    "before a new airliner can be used for commercial or cargo use, it must be able to stay in flight for another 70 miles when both engines are lost.",
+    "this is the 100th message"
 ]
