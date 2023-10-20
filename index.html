@@ -11,26 +11,27 @@
     <script>
         document.getElementById("msg").innerText = msg[Math.floor(Math.random()*msg.length)]
         if("foundMSG" in localStorage){
-    //returning visitor :)
-    var foundMSG = JSON.parse(localStorage.getItem("foundMSG"))
-    if(foundMSG.includes(document.getElementById("msg").innerText)){
-        //already found this message
-    }else{
-        //new message found!!11!
-        foundMSG.push(document.getElementById("msg").innerText)
-        localStorage.setItem("foundMSG", JSON.stringify(foundMSG))
-    }
-    }else{
-    //first time here?
-    foundMSG.append(document.getElementById("msg").innerText)
-    localStorage.setItem(JSON.stringify(foundMSG))
-    }
-    document.getElementById("counter").innerText = "You found " + foundMSG.length + " out of " + msg.length + " possible messages."
-    function reset() {
-    localStorage.setItem("foundMSG", JSON.stringify([]))
-    foundMSG = null
-    document.getElementById("counter").innerText = foundMSG.length
-    }
+            //returning visitor :)
+            var foundMSG = JSON.parse(localStorage.getItem("foundMSG"))
+            if(foundMSG.includes(document.getElementById("msg").innerText)){
+                //already found this message
+            }else{
+                //new message found!!11!
+                foundMSG.push(document.getElementById("msg").innerText)
+                localStorage.setItem("foundMSG", JSON.stringify(foundMSG))
+            }
+            }else{
+                var foundMSG = []
+                //first time here?
+                foundMSG.append(document.getElementById("msg").innerText)
+                localStorage.setItem(JSON.stringify(foundMSG))
+            }
+            document.getElementById("counter").innerText = "You found " + foundMSG.length + " out of " + msg.length + " possible messages."
+            function reset() {
+                localStorage.setItem("foundMSG", JSON.stringify([]))
+                foundMSG = null
+                document.getElementById("counter").innerText = foundMSG.length
+            }
     </script>
     <div class="wrap">
     <h2>General</h2><br>

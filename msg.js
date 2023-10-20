@@ -102,5 +102,7 @@ var msg = [
     "this is the 100th message",
     "Wafflqs",
     "the boeing 777 has the most powerfull engines of any airliner",
-    "hi from alex"
+    "hi from alex",
+    "shoe",
+    "python is not used in websites (most of the time)"
 ]
