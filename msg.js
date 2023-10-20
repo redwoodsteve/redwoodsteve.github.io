@@ -101,5 +101,6 @@ var msg = [
     "before a new airliner can be used for commercial or cargo use, it must be able to stay in flight for another 70 miles when both engines are lost.",
     "this is the 100th message",
     "Wafflqs",
-    "the boeing 777 has the most powerfull engines of any airliner"
+    "the boeing 777 has the most powerfull engines of any airliner",
+    "hi from alex"
 ]
