@@ -1,4 +1,11 @@
 const data = {
+    "727": {
+        "name":"727",
+        "gamepass": false,
+        "manufacturer": "Boeing",
+        "category":"Airliners",
+        "img":null
+    },
     "737": {
         "name":"737",
         "gamepass": false,
@@ -164,6 +171,13 @@ const data = {
         "name":"MD-11 cargo",
         "gamepass": false,
         "manufacturer": "McDonnell Douglas",
+        "category":"Cargo",
+        "img":null
+    },
+    "an225": {
+        "name":"AN-225",
+        "gamepass": true,
+        "manufacturer": "Antonov",
         "category":"Cargo",
         "img":null
     },
