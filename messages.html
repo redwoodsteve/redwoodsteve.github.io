@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="https://redwoodsteve.github.io/style.css">
+<style>
+    hr {
+        border: solid white 2px;
+        border-radius: 3px;
+    }
+</style>
+<h1>Messages</h1>
+<h2>Messages you've found:</h2>
+<div class="wrap">
+    <p>Three dots at the end mean the message is too big to fit in the screen.</p>
+    <button type="button" onclick="reset()">Reset found messages</button>
+    <hr>
+    <ul id="msgContainer">
+        
+    </ul>
+</div>
+<script>
+    const trimToN = (text, maxLength, dotCount) => {
+    let modText = text.trim();
+
+    if (modText.length > maxLength) {
+        modText = text.substring(0, maxLength - dotCount);
+        modText = modText.padEnd(maxLength, ".");
+
+        return modText;
+    }
+
+    return text;
+};
+var foundMSG = JSON.parse(localStorage.getItem("foundMSG"));
+function displayMSG(){
+  document.getElementById("msgContainer").innerHTML = ""
+  foundMSG = JSON.parse(localStorage.getItem("foundMSG"));
+  for (msg in foundMSG){
+    var msgElement = document.createElement("li");
+    var str = foundMSG[msg];
+    msgElement.innerHTML = '<p>' + trimToN(str, 80, 3) + '</p>';
+    document.getElementById("msgContainer").appendChild(msgElement);
+  };
+}
+displayMSG();
+function reset(){
+  if(confirm("This will reset all of the messages you've found.\nAre you sure you want to continue?") == true){
+    localStorage.removeItem("foundMSG");
+    displayMSG();
+    if("foundMSG" in localStorage){
+      alert("Something went wrong when trying to reset your messages.");
+    }else{
+      alert("Succesfully reset messages you've found.")
+    }
+  }
+}
+</script>
