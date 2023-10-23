@@ -58,7 +58,7 @@ var msg = [
     "amungsters",
     "HALOWEN",
     "redwoodsteve on discord",
-    "beam be up tommy",
+    "beam be up scotty",
     "its honest work",
     "much dogecoin",
     "breath air",
@@ -107,5 +107,11 @@ var msg = [
     "python is not used in websites (most of the time)",
     "GYATTTTTT",
     "bluemoji",
-    "'play hollowknight' - maxim"
+    "'play hollowknight' - maxim",
+    "you are awesome!",
+    "vsauce, michal here. you can't get this message.. or can you?",
+    "take me to your xbox to play minecraft today",
+    "heres a random number from 0 to 1: " + Math.random(),
+    "this will open google.com" + window.open("https://google.com"),
+    "lol"
 ]
