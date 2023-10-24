@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">@font-face {
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+@font-face {
     font-family: 'Manrope';
     src: url('https://redwoodsteve.github.io/manrope-reg.otf') format('opentype');
     font-weight: normal;
@@ -51,18 +54,18 @@ button:hover {
 button:active {
     box-shadow: inset 2px 2px 2px black;
     transform: translate(-1px, -1px);
-}</style>
-
-    
-        <title>Base64 tools</title>
-    </head>
+}
+</style>
+<title>Base64 tools</title>
+</head>
     <body>
         <h1>Base64 Tools</h1>
         <textarea id="input" cols="80" rows="10" placeholder="Input"></textarea>
         <button type="button" onclick="decode()">Decode</button>
         <button type="button" onclick="encode()">Encode</button>
         <textarea id="output" cols="80" rows="10" placeholder="Output" readonly=""></textarea>
-<script>function decode() {
+<script>
+function decode() {
     document.getElementById("output").value = atob(document.getElementById("input").value)
 }
 function encode() {
