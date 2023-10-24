@@ -112,6 +112,5 @@ var msg = [
     "vsauce, michal here. you can't get this message.. or can you?",
     "take me to your xbox to play minecraft today",
     "heres a random number from 0 to 1: " + Math.random(),
-    "this will open google.com" + window.open("https://google.com"),
     "lol"
 ]
