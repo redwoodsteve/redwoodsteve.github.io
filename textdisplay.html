@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head><meta http-equiv="cache-control" content="no-cache"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="-1"><style type="text/css">#textDisplay {
+    margin: auto;
+    display: grid;
+    overflow:hidden;
+    word-break:break-all;
+    font-size: 10vw;
+}
+input {
+    border-radius: 3px;
+    font-family: Manrope, sans-serif;
+    padding: 1px;
+    margin: 3px;
+    border: 3px solid #D4D9E2;
+}
+input[type=color]{
+    width: 3em;
+    height: 3em;
+    margin: 3px;
+    cursor: pointer;
+    border: 3px solid #D4D9E2;
+}
+#hideBTN {
+    width: min-content;
+    text-align: center;
+    bottom: 10px;
+    position: absolute;
+    opacity: 50%;
+}
+input::-webkit-color-swatch {
+    display: grid;
+    border-radius: 4px;
+}</style><link rel="stylesheet" href="https://redwoodsteve.github.io/style.css">
+</head><body style="background-image: url(&quot;https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8c3303ff-a286-41b0-a37b-95886b5262df/d9bdhwu-877f172a-a33b-41aa-a234-f47bed1f59fd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjMzMwM2ZmLWEyODYtNDFiMC1hMzdiLTk1ODg2YjUyNjJkZlwvZDliZGh3dS04NzdmMTcyYS1hMzNiLTQxYWEtYTIzNC1mNDdiZWQxZjU5ZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7173OQSnCegtr1qapTMVGmwRptZSgU3V1jBZGt_gXeo&quot;);"><div id="options" style="display: unset;">
+<h1>Text display</h1>
+<input type="text" id="text">
+<label for="text">Text to display</label>
+<br>
+<input type="color" id="color">
+<label for="color">Background color</label>
+<br>
+<input type="color" id="textColor" value="#ffffff">
+<label for="color">Text color</label>
+<button type="button" onclick="display()">Display</button>
+</div>
+<h1 id="textDisplay" style="display: none;">hdfgdfgdfgslgjsdhfglskdfjghsdfkgjhsdf;hjsdfg</h1>
+<button type="button" onclick="hide()" id="hideBTN" style="display: none;">Hide</button><script>document.getElementById("hideBTN").style = "display: none;"
+function hide() {
+  document.body.style = "background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8c3303ff-a286-41b0-a37b-95886b5262df/d9bdhwu-877f172a-a33b-41aa-a234-f47bed1f59fd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjMzMwM2ZmLWEyODYtNDFiMC1hMzdiLTk1ODg2YjUyNjJkZlwvZDliZGh3dS04NzdmMTcyYS1hMzNiLTQxYWEtYTIzNC1mNDdiZWQxZjU5ZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7173OQSnCegtr1qapTMVGmwRptZSgU3V1jBZGt_gXeo);"
+  document.getElementById("options").style = "display: unset;"
+  document.getElementById("textDisplay").style = "display: none;"
+  document.getElementById("hideBTN").style = "display: none;"
+};
+function display(){
+  document.body.style = "background: none; background-color: " + document.getElementById('color').value + ";"
+  document.getElementById("textDisplay").innerText = document.getElementById("text").value
+  document.getElementById("options").style = "display: none;"
+  document.getElementById("textDisplay").style = "color: " + document.getElementById('textColor').value + "; display: grid;"
+  document.getElementById("hideBTN").style = "display: unset;"
+}</script></body>
