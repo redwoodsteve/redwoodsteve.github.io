@@ -13,13 +13,13 @@ h2 {
     font-size: 1em;
 }
 body {
-    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8c3303ff-a286-41b0-a37b-95886b5262df/d9bdhwu-877f172a-a33b-41aa-a234-f47bed1f59fd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhjMzMwM2ZmLWEyODYtNDFiMC1hMzdiLTk1ODg2YjUyNjJkZlwvZDliZGh3dS04NzdmMTcyYS1hMzNiLTQxYWEtYTIzNC1mNDdiZWQxZjU5ZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7173OQSnCegtr1qapTMVGmwRptZSgU3V1jBZGt_gXeo);
+    background-image: url(https://media.istockphoto.com/id/1271783649/vector/thanksgiving-line-art-doodle-pumpkins-pear-apple-grape-leaf-seamless-pattern-background.jpg?s=612x612&w=0&k=20&c=rQGP1PCROtL8_hzVnWi-xSdN4MnBfVF6xbbqn4n711Y=);
     object-fit: cover;
     //background-attachment: fixed;
 }
 .wrap {
     text-align: left;
-    background-color: rgba(252, 130, 74, 0.7);
+    background: linear-gradient(53deg, rgba(255, 153, 0, 0.528) 0%, rgba(255, 0, 0, 0.514) 100%);
     width: 40%;
     margin: auto;
     border-radius: 8px;
@@ -79,13 +79,15 @@ ul {
     color: black;
 }
 #msgBox {
-    background: linear-gradient(53deg, rgba(252,129,74,0.5284488795518207) 0%, rgba(86,66,86,0.5144432773109244) 100%);
+    background: linear-gradient(53deg, rgba(255, 0, 0, 0.528) 0%, rgba(255, 85, 0, 0.514) 100%);
     border-radius: 8px;
     backdrop-filter: blur(2px);
 }
 .background-blur {
     backdrop-filter: blur(2px);
     border-radius: 3px;
+    margin: 0px;
+    padding: 5px;
 }
 .linkButton {
     background: none;
@@ -108,9 +110,11 @@ ul {
 #tr {
     top: 0px;
     right: 0px;
-    height: 25%;
+    height: auto;
     margin: 0px;
     position: absolute;
+    z-index: 1;
+    width: 10%;
 }
 #bl {
     bottom: 0px;
