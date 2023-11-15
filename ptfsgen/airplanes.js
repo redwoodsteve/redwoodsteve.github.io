@@ -258,6 +258,13 @@ const data = {
         "category":"Light Aircraft",
         "img":null
     },
+    "402": {
+        "name":"402",
+        "gamepass": false,
+        "manufacturer": "Cessna",
+        "category":"Light Aircraft",
+        "img":null
+    },
     "F-14 Tomcat": {
         "name":"F-14 Tomcat",
         "gamepass": false,
