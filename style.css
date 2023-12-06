@@ -9,17 +9,20 @@ h1,h2,h3,h4,h5,h6 {
     font-family: Manrope, sans-serif;
     color: black;
 }
+div > h1, div > h2, div > h3, div > h4 {
+    color: white;
+}
 h2 {
     font-size: 1em;
 }
 body {
-    background-image: url(https://media.istockphoto.com/id/1271783649/vector/thanksgiving-line-art-doodle-pumpkins-pear-apple-grape-leaf-seamless-pattern-background.jpg?s=612x612&w=0&k=20&c=rQGP1PCROtL8_hzVnWi-xSdN4MnBfVF6xbbqn4n711Y=);
+    background-image:radial-gradient(#f4f4f4, #bebebe);
     object-fit: cover;
-    //background-attachment: fixed;
+    background-attachment: fixed;
 }
 .wrap {
     text-align: left;
-    background: linear-gradient(53deg, rgba(255, 153, 0, 0.528) 0%, rgba(255, 0, 0, 0.514) 100%);
+    background: linear-gradient(53deg, rgb(55, 55, 55) 0%, rgb(21, 21, 21) 100%);
     width: 40%;
     margin: auto;
     border-radius: 8px;
@@ -30,7 +33,7 @@ label {
     font-family: Manrope, sans-serif;
 }
 button:not(.linkButton) {
-    background-color: #564256;
+    background-color: #353535;
     border: none;
     padding: 10px 32px;
     cursor: pointer;
@@ -44,7 +47,7 @@ button:not(.linkButton) {
     color: #E8E8E8;
 }
 button:hover:not(.linkButton) {
-    background-color: #806280;
+    background-color: #6c6c6c;
 }
 p {
     text-align: center;
@@ -61,12 +64,12 @@ a {
     text-align: center;
     display: grid;
     font-family: Manrope, sans-serif;
-    color: black;
+    color: white;
     font-size: 1em;
     transition-duration: 1s;
 }
 a:hover {
-    color: #564256;
+    color: #d0d0d0;
 }
 li {
     text-align: center;
@@ -79,7 +82,7 @@ ul {
     color: black;
 }
 #msgBox {
-    background: linear-gradient(53deg, rgba(255, 0, 0, 0.528) 0%, rgba(255, 85, 0, 0.514) 100%);
+    background: linear-gradient(53deg, rgb(55, 55, 55) 0%, rgb(21, 21, 21) 100%);
     border-radius: 8px;
     backdrop-filter: blur(2px);
 }
@@ -91,7 +94,7 @@ ul {
 }
 .linkButton {
     background: none;
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 0;
     font-size: 1em;
     text-decoration: underline;
@@ -105,7 +108,7 @@ ul {
     font-family: Manrope, sans-serif;
 }
 .linkButton:hover {
-    color: #564256;
+    color: #c2c2c2;
 }
 #tr {
     top: 0px;
