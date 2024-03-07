@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    background-image: url(Starfield_1.png);
+    color: #eee;
+    user-select: none;
+}
+body.loading {
+    cursor: wait;
+}
+.header {
+    height: 50px;
+    background-color: #ccc;
+    width: 100%;
+    font-size: 1.8em;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.logo {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+#satCountBig {
+    font-size: 5em;
+    text-align: left;
+    margin: 40px;
+    width: 50%;
+    margin-top: 100px;
+}
+.blueText {
+    color: #7ab3ef;
+}
+#loading {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    position: fixed;
+    cursor: wait;
+    font-size: 5em;
+    color: #eee;
+    padding: 0;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    background-image: url(earth-lights.jpg);
+    background-size: cover;
+}
+#loading p {
+    text-align: center;
+    margin-top: calc(50vh - 1em);
+}
+#loading div p {
+    height: min-content;
+}
+#loading .loadingCircle {
+    margin: auto;
+}
+.loadingCircle {
+    border: 16px solid #eee;
+    border-top: 16px solid #7ab3ef;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 0.7s linear infinite;
+}
+#loadingImageInfo {
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    font-size: 16px;
+}
+.satellite-list-wrapper {
+    list-style: none;
+    background-color: #eee;
+    margin: auto;
+    width: 50%;
+    border-radius: 34px;
+    padding: 12px;
+}
+#satellite-list {
+    list-style: none;
+    margin: auto;
+    padding: 12px;
+}
+.satellite-list-item {
+    border-radius: 34px;
+    color: #333;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
+    cursor: pointer;
+}
+.satellite-list-item:hover {
+    background-color: #bbb;
+}
+#nextPage,#prevPage,#firstPage,#lastPage {
+    color: black;
+    text-decoration-line: underline;
+    cursor: pointer;
+    width: 38px;
+    margin-left: 0;
+    display: inline;
+    text-align: center;
+}
+#firstPage {
+    margin-left: calc(50% - (38px * 2));
+}
+@media only screen and (max-width: 770px) {
+    .header {
+        font-size: 1.2em;
+    }
+    #satCountBig {
+        font-size: 2em;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .header {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    #satCountBig {
+        width: 75%;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .satellite-list-wrapper {
+        display: none;
+    }
+}
+.disabled {
+    opacity: 0.5;
+    text-decoration: none !important;
+    cursor: not-allowed !important;
+}

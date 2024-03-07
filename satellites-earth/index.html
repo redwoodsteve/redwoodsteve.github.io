@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Satellites orbiting Earth</title>
+</head>
+<body>
+    <div id="loading">
+        <div>
+            <p>loading..</p>
+            <div class="loadingCircle"></div>
+            <p id="loadingImageInfo">Image credit: NASA / Jasmin Moghbeli<br>This image shows earth, from the ISS.</p>
+        </div>
+    </div>
+    <div class="header"><span class="logo">🛰️</span>How many artificial satellites are orbiting Earth?</div>
+    <div class="body-content">
+        <h1 id="satCountBig">There are ~<span class="blueText" id="satCount">x</span> satellites in earth orbit.</h1>
+        <div class="satellite-list-wrapper">
+            <p id="sList-loading" style="display: none; color: black; text-align: center;">loading..</p>
+            <ul id="satellite-list">
+            <!--<li class="satellite-list-item">StarLink</li>-->
+            </ul>
+            <a id="firstPage">First</a>
+            <a id="prevPage">Prev</a>
+            <a id="nextPage">Next</a>
+            <a id="lastPage">Last</a>
+        </div>
+        <div style="height: 250px;"></div>
+        <p>data provided by <a href="https://celestrak.org">celestrak</a> through the <a href="https://tle.ivanstanojevic.me/#/">TLE API</a>.</p>
+    </div>
+</body>
+<script>
+    var totalSatellites
+    var nextPage
+    var prevPage
+    var firstPage
+    var lastPage
+    function updateButtons() {
+        if(prevPage == null){
+            document.getElementById("prevPage").classList.add("disabled");
+        }else{
+            document.getElementById("prevPage").classList.remove("disabled");
+        }
+        if(nextPage == null){
+            document.getElementById("nextPage").classList.add("disabled");
+        }else{
+            document.getElementById("nextPage").classList.remove("disabled");
+        }
+    }
+    function disableAll() {
+        document.getElementById("prevPage").classList.add("disabled");
+        document.getElementById("nextPage").classList.add("disabled");
+        document.getElementById("firstPage").classList.add("disabled");
+        document.getElementById("lastPage").classList.add("disabled");
+    }
+    function enableAll() {
+        document.getElementById("firstPage").classList.remove("disabled");
+        document.getElementById("lastPage").classList.remove("disabled");
+    }
+    function goToPage(url) {
+        if(url == null){
+            return
+        }
+        disableAll();
+        document.getElementById("sList-loading").style.display = "block"
+        while (document.getElementById("satellite-list").firstChild) {
+            document.getElementById("satellite-list").removeChild(document.getElementById("satellite-list").lastChild);
+        }
+        $.getJSON(url, function(data){
+            console.log(prevPage);
+            nextPage = data.view.next;
+            prevPage = data.view.previous;
+            firstPage = data.view.first;
+            lastPage = data.view.last;
+            for(i=0;i<data.member.length;i++){
+                var elem = document.createElement("li");
+                elem.classList.add("satellite-list-item");
+                elem.innerText = data.member[i].name
+                document.getElementById("satellite-list").appendChild(elem);
+            }
+            document.getElementById("sList-loading").style.display = "none"
+            enableAll();
+            updateButtons();
+        });
+    }
+    $.getJSON("https://tle.ivanstanojevic.me/api/tle/?page-size=10", function(data){
+        $("#loading").fadeOut()
+        totalSatellites = data.totalItems;
+        $("#satCount").text(totalSatellites);
+        console.log(data.member);
+        for(i=0;i<data.member.length;i++){
+            var elem = document.createElement("li");
+            elem.classList.add("satellite-list-item");
+            elem.innerText = data.member[i].name
+            document.getElementById("satellite-list").appendChild(elem);
+        }
+        nextPage = data.view.next;
+        prevPage = data.view.previous;
+        firstPage = data.view.first;
+        lastPage = data.view.last;
+        updateButtons();
+    });
+    $("#nextPage").on("click", e => {
+        if(!$("#nextPage").hasClass("disabled")){
+            goToPage(nextPage);
+        }
+    });
+    $("#prevPage").on("click", e => {
+        if(!$("#prevPage").hasClass("disabled")){
+            goToPage(prevPage)
+        }
+    });
+    $("#firstPage").on("click", e => {
+        if(!$("#firstPage").hasClass("disabled")){
+            goToPage(firstPage);
+        }
+    });
+    $("#lastPage").on("click", e => {
+        if(!$("#lastPage").hasClass("disabled")){
+            goToPage(lastPage)
+        }
+    });
+</script>
+</html>
