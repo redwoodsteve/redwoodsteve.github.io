@@ -1,8 +1,14 @@
 @font-face {
     font-family: 'Manrope';
-    src: url('manrope-reg.otf') format('opentype');
+    src: url('manrope-reg.eot');
+    src: url('manrope-reg.eot?#iefix') format('embedded-opentype'),
+    url('manrope-reg.woff2') format('woff2'),
+    url('manrope-reg.woff') format('woff'),
+    url('manrope-reg.ttf') format('truetype'),
+    url('manrope-reg.svg#Manrope-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 h1,h2,h3,h4,h5,h6 {
     text-align: center;
