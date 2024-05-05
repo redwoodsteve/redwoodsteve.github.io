@@ -1,6 +1,6 @@
+<audio id="player" autoplay controls><source src="blu.mp3" type="audio/mp3"></audio>
 <script>
-    onbeforeunload = () => true;
-  setTimeout(function(){
-    while(1)location.reload(1)
-  }, 0)
+    document.addEventListener("click", function(){
+        document.getElementById("player").play()
+    })
 </script>
