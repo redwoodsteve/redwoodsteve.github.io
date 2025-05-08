@@ -1,5 +1,8 @@
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
 header {
     position: fixed;
@@ -7,4 +10,5 @@ header {
     left: 0;
     width: 100vw;
     height: 50px;
+    background-color: #eee;
 }
