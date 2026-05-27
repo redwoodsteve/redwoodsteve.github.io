@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script type="module" crossorigin src="/lua-online/assets/index-C_Zklj_A.js"></script>
+      <link rel="stylesheet" crossorigin href="/lua-online/assets/index-BAjnTzm2.css">
+    </head>
+    <body>
+        <div class="resize-detector"></div>
+        <main>
+            <div class="sidebar">
+                <div>
+                    Files
+                    <button id="new-file-btn">+</button>
+                    <button id="new-folder-btn">+f</button>
+                    <button id="upload-file-btn">Upload</button>
+                </div>
+                <div id="explorer">
+                    <!--<div>main.lua</div>-->
+                </div>
+            </div>
+            <div class="editor">
+                <div class="editor-topbar">
+                    <div id="topbar-openfile"></div>
+                    <div id="topbar-savestatus"></div>
+                </div>
+                <div id="editor"></div>
+            </div>
+            <div class="editor-resizer"></div>
+            <div class="output-panel">
+                <div class="run-topbar">
+                    <button type="button" id="start-button">Start</button>
+                    <button type="button" id="stop-button">Stop</button>
+                </div>
+                <iframe class="canvas" id="canvas"></iframe>
+                <div class="terminal">
+                    
+                </div>
+            </div>
+            <div class="notifications">
+            </div>
+        </main>
+    </body>
+</html>

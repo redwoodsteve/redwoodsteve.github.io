@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { margin: 0; background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 100vh; }
+        canvas { max-width: 100%; max-height: 100%; border: none; }
+    </style>
+    <script src="love.js"></script>
+</head>
+<body>
+    <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+
+    <script>
+        window.addEventListener("message", (event) => {
+            if (event.data.type === "START_GAME") {
+                const files = event.data.files;
+
+                // 2. Define Module globally so Emscripten mutates THIS exact object
+                window.Module = {
+                    arguments: ["./"],
+                    canvas: document.getElementById("canvas"),
+                    print: (text) => window.parent.postMessage({type: "LOG", content: text}),
+                    printErr: (text) => window.parent.postMessage({type: "ERROR", content: text}),
+                    
+                    preRun: [
+                        function() {
+                            console.log("Injecting files into virtual filesystem...");
+                            
+                            files.forEach(file => {
+                                console.debug(file.name);
+                                if (file.name.endsWith(".keep")) {
+                                    return;
+                                }
+                                // 1. Split the path into the directory and the filename
+                                const lastSlash = file.name.lastIndexOf("/");
+                                let dir = "/";
+                                let filename = file.name;
+
+                                if (lastSlash !== -1) {
+                                    dir = "/" + file.name.substring(0, lastSlash);
+                                    filename = file.name.substring(lastSlash + 1);
+
+                                    // 2. Tell Emscripten to build the folder path starting from root "/"
+                                    // true, true means "canRead", "canWrite"
+                                    window.Module.FS_createPath("/", dir.substring(1), true, true);
+                                }
+
+                                // 3. Write the Uint8Array data into the folder
+                                // true, true, true means "canRead", "canWrite", "canOwn"
+                                window.Module.FS_createDataFile(dir, filename, file.content, true, true, true);
+                            });
+                            
+                            console.log("Files injected successfully.");
+                        }
+                    ]
+                };
+
+                window.parent.postMessage({type: "LOG", content: "--- START GAME ---"});
+
+                window.focus(); 
+                window.addEventListener("mousedown", () => {
+                    window.focus();
+                });
+
+                // NEW: Force the canvas to match the iframe size before booting
+                const canvas = document.getElementById("canvas");
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+
+                // Keep it synced if the user drags the IDE resizer!
+                /*window.addEventListener("resize", () => {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                });*/
+
+                // 3. Boot the engine by passing the global Module
+                window.Love(window.Module);
+            }
+        });
+    </script>
+</body>
+</html>
